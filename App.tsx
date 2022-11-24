@@ -1,11 +1,16 @@
 import * as React from 'react';
 import './style.css';
+import Ticket from './components/TicketManagement'
+
+//context
+import {UserAuthProvider} from './context/userAuth'
 
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <UserAuthProvider>
+          <Ticket />
+      </UserAuthProvider>
     </div>
   );
 }
