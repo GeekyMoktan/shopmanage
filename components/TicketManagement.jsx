@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Rides from './Rides'
 import Navbar from './Navbar'
 import Hero from './Hero'
 function Ticket() {
@@ -6,6 +7,7 @@ function Ticket() {
     <div>
       <Navbar />
       <Hero />
+      <Rides />
     </div>
   );
 }
