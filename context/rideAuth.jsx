@@ -12,7 +12,7 @@ export function useRideAuth() {
 }
 
 export function RideAuthProvider({ children }) {
-  const { user } = useUserAuth();
+  const { user,crand } = useUserAuth();
 
   
 
@@ -39,6 +39,7 @@ export function RideAuthProvider({ children }) {
       x.quantity = x.quantity + 1
       
     }
+    crand()
   }
 
   function decreItem(id,user){
@@ -50,7 +51,9 @@ export function RideAuthProvider({ children }) {
       let x = stores.find((item)=>item.id == id);
       x.quantity = x.quantity - 1
       
+
     }
+    crand()
   }
 
   return (

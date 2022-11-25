@@ -5,7 +5,7 @@ function SignUp({ c, h, o }) {
   return (
     <div
       class="show 
-      absolute top-0 right-0 left-0  z-50 p-4 md:inset-0 h-modal md:h-modal "
+      absolute w-full top-0 right-0 left-0  z-50 p-4 md:inset-0 h-modal md:h-modal "
     >
       <div class="relative mx-auto w-full max-w-md h-full  md:h-auto">
         <div

@@ -11,6 +11,12 @@ export function useUserAuth() {
 
 export function UserAuthProvider({ children }) {
 
+  const [rand,setRand] = useState(false);
+
+  const crand = () =>{
+    setRand(!rand)
+  }
+
   const [user,setUser] = useState()
 
   const login = () => {
@@ -22,6 +28,6 @@ export function UserAuthProvider({ children }) {
   }
   
   return (
-    <UserAuthContext.Provider value={{user,login,logout}}>{children}</UserAuthContext.Provider>
+    <UserAuthContext.Provider value={{user,login,logout,crand}}>{children}</UserAuthContext.Provider>
   );
 }
