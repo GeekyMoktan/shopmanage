@@ -3,7 +3,7 @@ import * as React from 'react';
 function Section() {
   return (
     <section class="bg-white dark:bg-gray-900">
-      <div class="pb-12 pt-20 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="pb-12 pt-20 px-4 mx-auto max-w-screen-md sm:py-16 lg:px-6">
         <div class="max-w-screen-md mb-1 text-center lg:mb-10 ">
           <h2 class="mb-4 text-center text-4xl tracking-tight font-extrabold text-gray-900 ">
             Book Tickets Fast and Easy Way
