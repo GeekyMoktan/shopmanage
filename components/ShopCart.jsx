@@ -37,7 +37,7 @@ function ShopCart({change}) {
         <div class="p-6 text-center">
           <div className='mb-5' >
           <h2 class="truncate text-base text-xs font-bold text-gray-800 dark:text-gray-800">
-            Your Tickets from TicketMS
+            Your Tickets from BOOKING 101
           </h2>
           </div>
           <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">

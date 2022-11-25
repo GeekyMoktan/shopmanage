@@ -9,7 +9,7 @@ function Section() {
             Book Tickets Fast and Easy Way
           </h2>
           <p class="text-gray-500 text-center mb-3 sm:text-xl">
-            Here at TicketMS you can buy tickets quickly than ever before
+            Here at BOOKING 101 you can buy tickets quickly than ever before
           </p>
 
           <button

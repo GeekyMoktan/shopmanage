@@ -79,7 +79,7 @@ function Navbar() {
     <nav class="bg-white px-2 sm:px-4 py-2 dark:bg-gray-900 shadow-md fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
         <span class="relative self-center text-sm font-medium whitespace-nowrap  hover:text-blue-800 ">
-          TICKETMS
+          BOOKING 101
           {user !== undefined ? (
             <span
               class="absolute font-normal 
