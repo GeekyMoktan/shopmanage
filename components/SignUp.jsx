@@ -1,17 +1,21 @@
 import * as React from 'react';
-import {useRef} from 'react'
-
-function SignUp({c,h,o}) {
+import { useRef } from 'react';
+import LogIn from './LogIn';
+function SignUp({ c, h, o }) {
   return (
     <div
       id="popup-modal"
       tabindex="-1"
-      class="show overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full"
+      class="show overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full "
     >
       <div class="relative w-full max-w-md h-full md:h-auto">
-        <div onClick={h} ref={o} class="relative bg-white rounded-lg shadow h-screen dark:bg-gray-700">
+        <div
+          onClick={h}
+          ref={o}
+          class="relative bg-white rounded-lg shadow h-screen dark:bg-gray-700"
+        >
           <button
-onClick={c}
+            onClick={c}
             type="button"
             class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
             data-modal-toggle="popup-modal"
@@ -48,13 +52,16 @@ onClick={c}
               ></path>
             </svg>
             <h3 class="mb-5 text-lg font-normal text-gray-700 dark:text-gray-400">
-              Log In before commiting 
+              Log In before commiting
             </h3>
-            
+
+            <LogIn />
+
             <button
+              onClick={c}
               data-modal-toggle="popup-modal"
               type="button"
-              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border ml-1 border-gray-200 text-xs font-medium px-2 py-1 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
             >
               No, cancel
             </button>

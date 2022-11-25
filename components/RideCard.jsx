@@ -1,21 +1,12 @@
 import * as React from 'react';
 
 import { useState } from 'react';
-
+import AddCartBtn from './AddCartBtn'
 //context
 import { useRideAuth } from '../context/rideAuth';
 import { useUserAuth } from '../context/userAuth';
 
-function AddToCart() {
-  return (
-    <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2 text-center">
-      <span class="mr-2">
-        <i class="fa-solid fa-cart-plus"></i>
-      </span>
-      Add to cart
-    </button>
-  );
-}
+
 
 function AddToStore({ id, user, quantity, ch, add }) {
   return (
@@ -98,7 +89,7 @@ function RideCard({ id, name, price, img }) {
 
       <div class="mb-2 text-center">
         {user === undefined ? (
-          <AddToCart />
+          <AddCartBtn />
         ) : quantity === undefined ? (
           <AddToStore
             id={id}
