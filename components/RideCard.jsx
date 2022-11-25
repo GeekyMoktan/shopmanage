@@ -17,6 +17,24 @@ function AddToCart() {
   );
 }
 
+function AddToStore({ id, user, quantity, ch, add }) {
+  return (
+    <button
+      onClick={() => {
+        add(id, user);
+        ch();
+        console.log(user.stores[0].quantity);
+      }}
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2 text-center"
+    >
+      <span class="mr-2">
+        <i class="fa-solid fa-cart-plus"></i>
+      </span>
+      Add to store
+    </button>
+  );
+}
+
 function CartButton({ quantity, add, id, user, ch, decre }) {
   return (
     <React.Fragment>
@@ -82,7 +100,13 @@ function RideCard({ id, name, price, img }) {
         {user === undefined ? (
           <AddToCart />
         ) : quantity === undefined ? (
-          <AddToCart />
+          <AddToStore
+            id={id}
+            user={user}
+            quantity={quantity}
+            add={addItem}
+            ch={changeNo}
+          />
         ) : (
           <CartButton
             id={id}
