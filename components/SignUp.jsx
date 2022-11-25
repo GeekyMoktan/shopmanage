@@ -6,7 +6,7 @@ function SignUp({ c, h, o }) {
     <div
       id="popup-modal"
       tabindex="-1"
-      class="show overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full "
+      class="show overflow-y-auto overflow-x-hidden absolute top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full "
     >
       <div class="relative w-full max-w-md h-full md:h-auto">
         <div
@@ -15,7 +15,7 @@ function SignUp({ c, h, o }) {
           class="relative bg-white rounded-lg shadow h-screen dark:bg-gray-700"
         >
           <button
-            onClick={c}
+            onClick={()=>{c()}}
             type="button"
             class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
             data-modal-toggle="popup-modal"
