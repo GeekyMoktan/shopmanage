@@ -40,7 +40,7 @@ function Signing() {
       sign in
     </button>
     {
-      on === true ? <SignUp /> : null 
+      on === true ? <SignUp c={changeOn} /> : null 
     }
     </Fragment>
   );
