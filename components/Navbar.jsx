@@ -1,14 +1,26 @@
 import * as React from 'react';
-import { Fragment } from 'react';
+import { Fragment , useState } from 'react';
 import { useUserAuth } from '../context/userAuth';
 
 import ShopCart from './ShopCart';
 
 function ShopIcon() {
+ 
+  const [on,setOn] = useState(false)
+
   return (
-    <span class="font-normal hover:text-white py-1 px-2 mr-1 border border-blue-500 text-xs rounded hover:text-blue-500">
+    <Fragment>
+    <span onClick={
+      ()=>{
+      setOn(!on)
+      }
+    } class="font-normal hover:text-white py-1 px-2 mr-1 border border-blue-500 text-xs rounded hover:text-blue-500">
       <i class="fa-solid fa-cart-shopping"></i>
     </span>
+    { on === true ?     <ShopCart/> : null 
+ }
+    
+    </Fragment>
   );
 }
 
