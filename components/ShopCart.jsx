@@ -2,8 +2,13 @@ import * as React from 'react';
 
 import ShopItem from './ShopItem'
 
+import { rides } from '../data/data';
+
 import { useUserAuth } from '../context/userAuth';
 
+function getItem(id) {
+  return rides.find((item) => item.id === id);
+}
 
 function ShopCart({change}) {
   const { user } = useUserAuth();
@@ -34,7 +39,8 @@ function ShopCart({change}) {
               
               user.stores.map((item,index)=>{
                 console.log('from shopcart',item.id, item.quantity);
-                <ShopItem id={item.id} q={item.quantity} />
+                let i = getItem(item.id);
+                <ShopItem i={i} />
               })
             }
 

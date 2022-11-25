@@ -6,13 +6,8 @@ function getItem(id) {
   return rides.find((item) => item.id === id);
 }
 
-function ShopItem({ id, q }) {
-  console.log('from shopitem', id, q);
-  let item = getItem(id);
-  if (item === undefined) {
-    return null;
-  }
-  let { image, price, name } = item;
+function ShopItem({ i }) {
+  let { image, price, name } = i;
   return (
     <li class="pb-3 pt-2 sm:pb-4">
       <div class="flex flex-wrap items-center space-x-4">
