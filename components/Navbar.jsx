@@ -3,7 +3,7 @@ import { Fragment, useState, useRef } from 'react';
 import { useUserAuth } from '../context/userAuth';
 
 import ShopCart from './ShopCart';
-import SignUp from './SignUp'
+import SignUp from './SignUp';
 
 function ShopIcon() {
   const [on, setOn] = useState(false);
@@ -28,6 +28,7 @@ function ShopIcon() {
 }
 
 function Signing() {
+  const [on]
   return (
     <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-2 mr-1 border border-blue-500 text-xs hover:border-transparent rounded">
       sign in
