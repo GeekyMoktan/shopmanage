@@ -14,6 +14,8 @@ export function useRideAuth() {
 export function RideAuthProvider({ children }) {
   const { user } = useUserAuth();
 
+  
+
   const getId = (id, user) => {
     let { stores } = user;
 
@@ -22,6 +24,8 @@ export function RideAuthProvider({ children }) {
 
     return storeItem;
   };
+
+  
 
   function addItem(id,user){
     console.log('incre')

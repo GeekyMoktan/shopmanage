@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 
 function ShopIcon() {
   const [on, setOn] = useState(false);
-
+  let {user} = useUserAuth();
   const changeOn = () => {
     setOn(!on);
   };
@@ -22,7 +22,7 @@ function ShopIcon() {
       >
         <i class="fa-solid fa-cart-shopping"></i>
       </span>
-      {on === true ? <ShopCart change={changeOn} /> : null}
+      {on === true ? <ShopCart  change={changeOn} /> : null}
     </Fragment>
   );
 }
