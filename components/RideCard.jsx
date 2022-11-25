@@ -19,13 +19,13 @@ function CartButton({ quantity }) {
   return (
     <React.Fragment>
     <button class="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1 text-center mr-1">
-      +
+    <i class="fa-solid fa-plus"></i>
     </button>
     <button class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1 text-center">
       {quantity}
     </button>
     <button class="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1 text-center ml-1">
-      -
+    <i class="fa-solid fa-minus"></i>
     </button>
     </React.Fragment>
   );
