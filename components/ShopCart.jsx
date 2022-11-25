@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import {useState} from 'react'
 import ShopItem from './ShopItem'
 
 import { rides } from '../data/data';
@@ -11,6 +11,13 @@ function getItem(id) {
 }
 
 function ShopCart({change}) {
+
+  const [r,setR] = useState(true);
+
+  const changeR = () => {
+    setR(!r)
+  }
+
   const { user } = useUserAuth();
   
   {'HELLO'}
@@ -38,13 +45,14 @@ function ShopCart({change}) {
             {
               
               user.stores.map((item,index)=>{
-                console.log('from shopcart',item.id, item.quantity);
-                let i = getItem(item.id);
-                <ShopItem i={i} />
+                
+                return (
+                <ShopItem changeR={changeR} id={item.id} q={item.quantity} />
+                )
               })
             }
 
-{/* <ShopItem id={1} q={5} /> */}
+
             
             
           </ul>
