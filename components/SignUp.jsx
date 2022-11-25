@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function SignUp({c}) {
+function SignUp({c,h,o}) {
   return (
     <div
       id="popup-modal"
@@ -8,7 +8,7 @@ function SignUp({c}) {
       class="show overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full"
     >
       <div class="relative w-full max-w-md h-full md:h-auto">
-        <div class="relative bg-white rounded-lg shadow h-screen dark:bg-gray-700">
+        <div onClick={h} ref={o} class="relative bg-white rounded-lg shadow h-screen dark:bg-gray-700">
           <button
 onClick={c}
             type="button"

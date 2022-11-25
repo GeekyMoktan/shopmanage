@@ -30,6 +30,15 @@ function ShopIcon() {
 function Signing() {
   const [on,setOn] = useState(false)
 
+  const overlayRef = useRef(null)
+
+  const handleClose = (e) => {
+    e.preventDefault();
+    if(e.target.value === overlayRef.current){
+      setOn(false)
+    }
+  }
+
   const changeOn = () => {
     setOn(!on)
   }
@@ -40,7 +49,7 @@ function Signing() {
       sign in
     </button>
     {
-      on === true ? <SignUp c={changeOn} /> : null 
+      on === true ? <SignUp c={changeOn} h={handleClose} o={overlayRef} /> : null 
     }
     </Fragment>
   );
