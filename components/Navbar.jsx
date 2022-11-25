@@ -33,8 +33,10 @@ function Signing() {
   const overlayRef = useRef(null)
 
   const handleClose = (e) => {
-    e.preventDefault();
-    if(e.target.value === overlayRef.current){
+    //e.preventDefault();
+    
+    if(e.target === overlayRef.current){
+      
       setOn(false)
     }
   }
