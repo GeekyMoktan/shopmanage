@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Fragment , useState } from 'react';
+import { Fragment , useState, useRef  } from 'react';
 import { useUserAuth } from '../context/userAuth';
 
 import ShopCart from './ShopCart';
@@ -8,16 +8,20 @@ function ShopIcon() {
  
   const [on,setOn] = useState(false)
 
+  const changeOn = () => {
+    setOn(!on)
+  }
+
   return (
     <Fragment>
     <span onClick={
       ()=>{
-      setOn(!on)
+      changeOn()
       }
     } class="font-normal hover:text-white py-1 px-2 mr-1 border border-blue-500 text-xs rounded hover:text-blue-500">
       <i class="fa-solid fa-cart-shopping"></i>
     </span>
-    { on === true ?     <ShopCart/> : null 
+    { on === true ?     <ShopCart change={ changeOn}/> : null 
  }
     
     </Fragment>
