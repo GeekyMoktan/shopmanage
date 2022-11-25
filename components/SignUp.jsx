@@ -45,8 +45,8 @@ function SignUp() {
                 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               ></path>
             </svg>
-            <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-              Log in first To buy Ticket
+            <h3 class="mb-5 text-lg font-normal text-gray-700 dark:text-gray-400">
+              Log In before commiting 
             </h3>
             
             <button
