@@ -47,6 +47,6 @@ export let users = [
   {
     name: 'moktan',
     password: 'helloworld321',
-    cartItems: [{ id: 1, quantity: 5 }],
+    stores: [{ id: 1, quantity: 5 }],
   },
 ];
