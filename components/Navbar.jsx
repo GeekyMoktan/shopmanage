@@ -40,7 +40,7 @@ function Navbar() {
           ) : (
             <Fragment>
               <span class="font-normal hover:text-white py-1 px-2 mr-1 border border-blue-500 text-xs rounded hover:text-blue-500">
-              
+              <i class="fa-solid fa-cart-shopping"></i>
               </span>
               <button
                 onClick={logout}
